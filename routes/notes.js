@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 const Note = require('../models/note');
 
-router.get('/new', (req, res) => {
-  res.render('new');
+router.get('/new2', (req, res) => {
+  res.render('new2');
 });
 
 router.post('/', async (req, res) => {
@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
     res.redirect('/');
   } catch (e) {
     console.log(e);
-    res.render('new');
+    res.render('new2');
   }
 });
 

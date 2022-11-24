@@ -15,7 +15,7 @@ app.use(methodOverride('_method'));
 
 app.get('/', async (req, res) => {
   const notes = await Note.find().sort('-createdAt');
-  res.render('index', { notes: notes });
+  res.render('index2', { notes: notes });
 });
 
 //const dburi = "mongodb+srv://tara:tara0104@tarannummongodb.uf3qxwq.mongodb.net/?retryWrites=true&w=majority" ;
@@ -25,7 +25,7 @@ mongoose.connect(process.env.SERVER, {
 });
 
 app.use('/', notesRouter);
-app.listen(process.env.PORT || 5500, () => {
+app.listen(process.env.PORT || 8000, () => {
   console.log(`Server Has Started`);
 });
 

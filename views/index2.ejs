@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>Notes App in JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Iconscout Link For Icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  </head>
+  <body>
+    
+    <div class="wrapper">
+      <li class="add-box">
+        <div class="icon"><i class="uil uil-plus"></i></div>
+         <a href="/new2"><p>Add new note</p></a>
+      </li>
+      
+      <div class="note">
+        <% notes.forEach(note => { %>
+        <div class="details">
+            <p><%= note.title %></p>
+            <span><%= note.description %></span>
+        </div>
+        <div class="bottom-content">
+            <span><%= note.createdAt.toLocaleDateString() %></span>
+            <div class="settings">
+                <i ></i>
+                <ul class="menu">
+                    <li><i class="uil uil-pen"></i>Edit</li>
+                    <li><i class="uil uil-trash"></i>Delete</li>
+                </ul>
+            </div>
+          </div>
+          <%}) %>
+        </div>
+    
+    </div>
+
+    <script src="script.js"></script>
+    
+  </body>
+</html>
