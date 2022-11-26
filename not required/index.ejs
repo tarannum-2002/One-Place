@@ -1,31 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include("./partials/header")  %>
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="/">Todo App</a>
+</nav>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <title>Notes Tonight</title>
-</head>
+<div class="container mt-5">
+    <form action="/add/todo" method="POST" class="d-flex">
+        <input type="text" name="todo" class="form-control" placeholder="Enter Todo">
+        <input type="submit" value="Add Todo" class="btn btn-md btn-primary mx-2">
+    </form>
 
-<body>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-4">???? Take Notes Tonight</h1>
-            <a href="/new2" class="btn btn-success float-right">New Note</a>
-        </div>
-    </div>
-    <div class="container">
-        <% notes.forEach(note => { %>
-        <div class="card mt-2">
-            <div class="card-body">
-                <h5 class="card-title"><%= note.title %></h5>
-                <p class="text-muted">Posted On: <%= note.createdAt.toLocaleDateString() %></p>
-            </div>
-        </div>
-        <%}) %>
-    </div>
-</body>
 
-</html>
+    <ul class="list-group my-5">
+        <% todo.forEach(todos => { %>
+        <li class="list-group-item"><%= todos.todo %> <a href="/delete/todo/<%= todos._id %>"
+                class="btn btn-danger btn-sm">Delete</a></li>
+
+        <% }) %>
+
+    </ul>
+</div>
+
+
+
+
+
+<%- include("./partials/footer")  %>
