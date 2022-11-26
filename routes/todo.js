@@ -34,10 +34,10 @@ router
   .get("/update/todo/:_id",(req,res)=>{
     const {_id}=req.params;
     const info=Todo.find();
-    console.log(info)
+    // console.log(info)
     Todo.updateOne({_id}, { done: true})
     .then(()=>{
-        console.log("deleted")
+        console.log("Updated Todo succesfully!")
         res.redirect('/index3')
     })
     .catch((err)=>console.log(err));

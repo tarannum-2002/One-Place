@@ -112,7 +112,7 @@ body{
   bottom: 0;
   right: -5px;
   padding: 5px 0;
-  background: #fff;
+  background: rgb(223, 19, 19);
   position: absolute;
   border-radius: 4px;
   transform: scale(0);

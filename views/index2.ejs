@@ -14,12 +14,11 @@
     <div class="wrapper">
       <li class="add-box">
         <div class="icon"><i class="uil uil-plus"></i></div>
-         <a href="/new2"><p>Add new note</p></a>
+         <a href="/new2" style="text-decoration: none; "><p>Add new note</p></a>
       </li>
       
-      <div class="note">
-       
-        <% notes.forEach(note => { %>
+      <% notes.forEach(note => { %>
+      <li class="note">
         <div class="details">
             <p><%= note.title %></p>
             <span><%= note.description %></span>
@@ -27,7 +26,7 @@
         <div class="bottom-content">
             <span><%= note.createdAt.toLocaleDateString() %></span>
             <div class="settings">
-                <i ></i>
+                
                 <ul class="menu">
                     <li><i class="uil uil-pen"></i>Edit</li>
                     <li><i class="uil uil-trash"></i>Delete</li>
@@ -36,7 +35,26 @@
           </div>
           <%}) %>
         
-        </div>
+        </li>
+
+<!-- 
+        <li class="note">
+          <div class="details">
+              <p>awsdea</p>
+              <span>aweawae</span>
+          </div>
+          <div class="bottom-content">
+              <span>November 26, 2022</span>
+              <div class="settings">
+                  <i onclick="showMenu(this)" class="uil uil-ellipsis-h"></i>
+                  <ul class="menu">
+                      <li onclick="updateNote(2, 'awsdea', 'aweawae')"><i class="uil uil-pen"></i>Edit</li>
+                      <li onclick="deleteNote(2)"><i class="uil uil-trash"></i>Delete</li>
+                  </ul>
+              </div>
+          </div>
+      </li> -->
+
       
     </div>
   
