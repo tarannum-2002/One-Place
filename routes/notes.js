@@ -11,6 +11,7 @@ router.get('/index2', async (req, res) => {
   res.render('index2', { notes: notes });
 });
 
+
 router.post('/', async (req, res) => {
   let note = await new Note({
     title: req.body.title,

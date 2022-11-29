@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const { render } = require("ejs");
 const Todo = require("../models/Todo");
 
 // routes
@@ -11,6 +12,7 @@ router
       res.redirect("/index3")
     }
 
+
     // save the todo
     newTodo
       .save()
@@ -20,6 +22,8 @@ router
       })
       .catch((err) => console.log(err));
   })
+
+  
 
   .get("/delete/todo/:_id", (req, res) => {
     const { _id } = req.params;

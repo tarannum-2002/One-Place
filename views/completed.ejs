@@ -25,9 +25,9 @@
 
       <div class="controls">
         <div class="filters">
-          <span class="active" id="all">All</span>
-          <a href="/pending" style="text-decoration: none;"><span id="pending">Pending</span></a>
-          <a href="/completed" style="text-decoration: none;"><span id="completed">Completed</span></a>
+          <a href="/index3" style="text-decoration: none;"><span id="all">All</span></a>
+          <a href="/pending" style="text-decoration: none;"><span  id="pending">Pending</span></a>
+          <span class="active" id="completed">Completed</span>
         </div>
         <button class="clear-btn">Clear All</button>
       </div>
@@ -35,11 +35,11 @@
 
       <ul class="task-box">
         <% todo.forEach(todos => { %>
-        <li class="task" 
-            <% if(todos.done == true) 
-                { %>style= "text-decoration: line-through;"
-                <% } %> >
-                    <%= todos.todo %>
+          <li class="task" 
+              <% if(todos.done == true) 
+                  { %>style= "text-decoration: line-through;"
+                  <% } %> >
+                      <%= todos.todo %>            
                     <span>
 
             </label>
