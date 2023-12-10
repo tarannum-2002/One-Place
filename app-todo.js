@@ -23,4 +23,4 @@ app.use(require("./routes/todo"))
 
 
 // server configurations....
-app.listen(3500, () => console.log("Server started listening on port: 3500"));
+app.listen(3000, () => console.log("Server started listening on port: 3000"));

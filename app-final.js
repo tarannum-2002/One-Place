@@ -7,7 +7,7 @@ const app = express();
 const Note = require('./models/note');
 
 app.use(bodyParser.json()) // for parsing application/json
-app.use(bodyParser.urlencoded({ extended: true })) 
+app.use(bodyParser.urlencoded({ extended: true }))
 
 const notesRouter = require('./routes/notes');
 app.use(require("./routes/index"))
@@ -22,8 +22,8 @@ app.use(methodOverride('_method'));
 
 
 app.get('/', async (req, res) => {
-   
-    res.render('index');
+
+  res.render('index');
 });
 
 app.use(notesRouter)
@@ -32,13 +32,12 @@ app.use(require("./routes/todo"))
 
 
 
-  mongoose.connect(process.env.SERVER, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
-  
-  
-  app.listen(process.env.PORT || 8000, () => {
-    console.log(`Server Has Started at 8000`);
-  });
-  
+mongoose.connect(process.env.SERVER, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`Server Has Started at 3000`);
+});

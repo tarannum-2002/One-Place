@@ -1,4 +1,12 @@
 {
+  "name": "one-place-docker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app-final.js",
+  "scripts": {
+    "start": "node app-final.js",
+    "dev": "nodemon app-final.js"
+  },
   "dependencies": {
     "body-parser": "^1.20.1",
     "dotenv": "^16.0.3",
